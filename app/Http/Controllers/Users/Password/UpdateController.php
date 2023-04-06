@@ -19,7 +19,7 @@ class UpdateController extends Controller
             $userRepository->passwordUpdate($id, $request->all());
         } catch (WrongOldPasswordException $exception) {
             return redirect()
-                ->route('admin.users.edit', $id)
+                ->route('users.edit', $id)
                 ->with('error', 'Old password doesn\'t match!');
         }
 

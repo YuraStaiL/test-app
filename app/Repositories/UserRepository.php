@@ -3,11 +3,9 @@
 namespace App\Repositories;
 
 use App\Exceptions\WrongOldPasswordException;
-use App\Mail\VerificationEmail;
 use App\Models\User;
 use Exception;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
@@ -26,7 +24,7 @@ class UserRepository
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $id],
         ]);
 
-        $user = $this->model::query()->findOrFail($id);
+        $user = User::query()->find($id);
 
         $user->updateOrFail([
             'first_name' => $data['first_name'],
@@ -76,12 +74,8 @@ class UserRepository
             ]);
     }
 
-    public function destroy(int $id): void
+    public function destroy(int $id): bool
     {
-//        $this->model::findOrFail($id)
-//            ->delete();
-
-         $user = User::find($id);
-         $user->delete();
+         return User::find($id)->delete();
     }
 }
