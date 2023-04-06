@@ -18,7 +18,7 @@
                                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-user') }}"></use>
                                         </svg>
                                     </span>
-                                <input id="first_name" name="first_name" class="form-control" type="text" placeholder="first_name">
+                                <input id="first_name" name="first_name" class="form-control" type="text" placeholder="First name">
                             </div>
 
                             <div class="input-group mb-3">
@@ -27,7 +27,7 @@
                                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-user') }}"></use>
                                         </svg>
                                     </span>
-                                <input id="last_name" name="last_name" class="form-control" type="text" placeholder="last_name">
+                                <input id="last_name" name="last_name" class="form-control" type="text" placeholder="Last name">
                             </div>
 
                             <div class="input-group mb-3">

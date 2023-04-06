@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.2
-* @link https://coreui.io
-* Copyright (c) 2022 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 <html lang="en">
 <head>
     <base href="./">
@@ -13,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
+    <meta name="author" content="Yurii Faryna">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Login</title>
-    <meta name="theme-color" content="#ffffff">
-    <!-- Vendors styles-->
-    <!-- Main styles for this application-->
+    <title>Register</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
     <link href="{{ asset('css/examples.css') }}" rel="stylesheet">
@@ -74,7 +64,7 @@
                                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-user') }}"></use>
                                         </svg>
                                     </span>
-                                <input id="first_name" name="first_name" class="form-control" type="text" placeholder="first_name">
+                                <input id="first_name" name="first_name" class="form-control" type="text" placeholder="First name">
                             </div>
 
                             <div class="input-group mb-3">
@@ -83,7 +73,7 @@
                                             <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-user') }}"></use>
                                         </svg>
                                     </span>
-                                <input id="last_name" name="last_name" class="form-control" type="text" placeholder="last_name">
+                                <input id="last_name" name="last_name" class="form-control" type="text" placeholder="Last name">
                             </div>
 
                             <div class="input-group mb-3">

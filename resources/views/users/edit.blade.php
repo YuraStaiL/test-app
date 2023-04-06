@@ -18,7 +18,7 @@
                                     @csrf
                                     <h5 class="mb-0">
                                         <label for="name" class="form-label">
-                                            Name
+                                            First name
                                         </label>
                                     </h5>
                                     <div class="input-group mb-3">
@@ -29,6 +29,12 @@
                                     </span>
                                         <input id="first_name" name="first_name" value="{{ $user->first_name }}" class="form-control" type="text" placeholder="Name">
                                     </div>
+
+                                    <h5 class="mb-0">
+                                        <label for="name" class="form-label">
+                                            Last name
+                                        </label>
+                                    </h5>
 
                                     <div class="input-group mb-3">
                                     <span class="input-group-text">
