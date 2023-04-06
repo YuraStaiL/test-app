@@ -31,6 +31,8 @@ Route::post('/login-process', [AuthController::class, 'login'])->name('login.pro
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.process');
 
+Route::get('/verify/{token}', VerifyController::class)->name('verify');
+
 Route::middleware('guest')
     ->group(function () {
         Route::get('/forgot-password', [ForgotPasswordController::class, 'forgotPassword'])
@@ -41,7 +43,6 @@ Route::middleware('guest')
             ->name('password.reset');
         Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])
             ->name('password.update');
-        Route::get('/verify/{token}', VerifyController::class)->name('verify');
     });
 
 
@@ -60,7 +61,7 @@ Route::middleware(['auth', 'email'])
                 Route::get('/{user}/destroy', DeleteUser::class)->name('destroy');
                 Route::post('/{user}/password/update', UpdatePasswordUsers::class)->name('password.update');
             });
-//
+
         Route::prefix('/orders')
             ->as('orders.')
             ->group(function () {

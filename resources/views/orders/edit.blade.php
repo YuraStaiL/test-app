@@ -1,6 +1,6 @@
 @extends("layouts.master")
 
-@section("title", "Edit User")
+@section("title", "Edit order")
 
 @section("content")
     <div class="bg-light min-vh-80 d-flex flex-row align-items-center">

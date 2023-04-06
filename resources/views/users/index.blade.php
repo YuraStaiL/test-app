@@ -1,5 +1,6 @@
 @extends("layouts.master")
-@section("title", "User")
+
+@section("title", "Users")
 
 @section("content")
 <body>
@@ -20,6 +21,7 @@
                     <th scope="col">First name</th>
                     <th scope="col">Last name</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Verified email</th>
                     <th scope="col">Registered</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -31,6 +33,7 @@
                         <td>{{ $user->first_name }}</td>
                         <td>{{ $user->last_name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td>
                         <td>{{ $user->created_at }}</td>
                         <td>
                             <a type="button" class="btn btn-outline-primary" href="{{ route('users.edit', [ 'user' => $user->id ]) }}" >
@@ -45,7 +48,7 @@
                 </tbody>
             </table>
             <div>
-                {{ $users->links() }}
+                {{ $users->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

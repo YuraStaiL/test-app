@@ -1,9 +1,9 @@
 @extends("layouts.master")
 
-@section("title", "Users")
+@section("title", "Create user")
 
 @section("content")
-    <div class="container">
+    <div class="container-fluid w-50">
         <div class="row justify-content-center">
             <div class="card-group d-block d-md-flex row">
                 <div class="card col-md-7 p-4 mb-0">

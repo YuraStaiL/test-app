@@ -15,6 +15,6 @@ class DestroyController extends Controller
     {
         $orderRepository->destroy($id);
 
-        return redirect()->route('users.index')->with('success', 'User deleted successfully.');
+        return redirect()->route('orders.index')->with('success', 'Order deleted successfully.');
     }
 }

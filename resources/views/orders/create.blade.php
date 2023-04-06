@@ -1,6 +1,6 @@
 @extends("layouts.master")
 
-@section("title", "Users")
+@section("title", "Create order")
 
 @section("content")
     <div class="container">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary px-4" type="submit">Update</button>
+                                    <button class="btn btn-primary px-4" type="submit">Add</button>
                                 </div>
                             </div>
                         </form>

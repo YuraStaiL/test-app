@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section("title", "User")
+@section("title", "Orders")
 
 @section("content")
 <body>
@@ -17,8 +17,8 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">user_id</th>
-                    <th scope="col">order_name</th>
+                    <th scope="col">User Id</th>
+                    <th scope="col">Order Name</th>
                     <th scope="col">Registered</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -43,7 +43,7 @@
                 </tbody>
             </table>
             <div>
-                {{ $orders->links() }}
+                {{ $orders->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

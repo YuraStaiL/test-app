@@ -26,6 +26,6 @@ class VerifyController extends Controller
             'email_verification_token' => ''
         ]);
 
-        return redirect()->route('login')->with('success', 'Your account is activated, you can log in now');
+        return redirect()->route('users.index')->with('success', 'Your account is activated, you can log in now');
     }
 }
