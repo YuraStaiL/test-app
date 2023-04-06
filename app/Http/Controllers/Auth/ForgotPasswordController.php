@@ -7,7 +7,6 @@ use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
@@ -61,7 +60,9 @@ class ForgotPasswordController extends Controller
         return $status === Password::PASSWORD_RESET
             ? redirect()
                 ->route('login')
-                ->with('status', __($status))
-            : back()->withErrors(['email' => [__($status)]]);
+                ->with('success', __($status))
+            : redirect()
+                ->route('login')
+                ->with('error', __($status));
     }
 }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
 class VerifyController extends Controller
@@ -27,6 +26,6 @@ class VerifyController extends Controller
             'email_verification_token' => ''
         ]);
 
-        return redirect()->route('users.index')->with('success', 'Your account is activated, you can log in now');
+        return redirect()->back()->with('success', 'Your account is activated, you can log in now');
     }
 }
